@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", serif;
+  list-style: none;
+}
+button,
+input,
+textarea {
+  border: 0;
+  outline: none;
+}
+.app_wrapper {
+  height: 100vh;
+  width: 100%;
+  background: #f8f8f8;
+  display: grid;
+  place-items: center;
+}
+.app_wrapper .todoList {
+  width: 500px;
+  border-radius: 30px;
+  padding: 26px;
+  box-shadow: 0 0 5px rgb(215, 215, 215);
+}
+h1.title {
+  font-size: 28px;
+  font-weight: 600;
+  color: rgb(77, 77, 77);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+p.description {
+  font-size: 14px;
+  color: rgb(124, 124, 124);
+}
+.input_wrapper {
+  background: #ffffff;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.input_wrapper #text_input {
+  padding: 10px 20px;
+  width: 100%;
+}
+.input_wrapper #submit_button {
+  background: #e1d0ff;
+  height: 100%;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  color: #6e19ff;
+  cursor: pointer;
+}
+
+#task_list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#task_list li.todo {
+  font-size: 14px;
+  background: #fff;
+  color: #363636;
+  font-weight: 500;
+  padding: 10px;
+  padding-left: 40px;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#task_list li.todo::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 16px;
+  width: 16px;
+  border: 3px solid #363636;
+  border-radius: 50%;
+}
+#task_list li.todo.checked {
+  background: #6e19ff;
+  color: #e1d0ff;
+}
+#task_list li.todo.checked::before {
+  background-image: url(accept.png);
+  background-size: 100%;
+  border: 0;
+  height: 24px;
+  width: 24px;
+}
+#task_list li.todo img {
+  width: 16px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 40px;
+}
+#task_list .time {
+  font-size: 10px;
+  position: absolute;
+  right: 40px;
+}
